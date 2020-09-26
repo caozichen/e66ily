@@ -151,6 +151,9 @@ public class MainActivity extends AppCompatActivity {
 
                Button btn = (Button)view;
                String addContent = btn.getText().toString();
+               if(addContent.equals("+")||addContent.equals("-")||addContent.equals("*")||addContent.equals("/")){
+                   dian = false;
+               }
                input = (TextView)findViewById(R.id.jieguo);
                String now = input.getText().toString();
                String newContent;
