@@ -3,12 +3,15 @@ package com.example.myapplication;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.icu.text.SymbolTable;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
     TextView input;
@@ -46,15 +49,28 @@ public class MainActivity extends AppCompatActivity {
         Button C = (Button)findViewById(R.id.ButtonC);
         Button tran = (Button) findViewById(R.id.tran);
 
+
+        //hengpingde
+
+        Button sin = (Button)findViewById(R.id.sin);
+        Button cos = (Button)findViewById(R.id.cos);
+        Button tan = (Button)findViewById(R.id.tan);
+        Button pingfang = (Button)findViewById(R.id.pingfang);
+        Button lifang = (Button)findViewById(R.id.lifang);
+        Button genhao = (Button)findViewById(R.id.genhao);
+        Button PI = (Button)findViewById(R.id.PI);
+        Button e = (Button)findViewById(R.id.e);
+        Button jiecheng = (Button)findViewById(R.id.jiecheng);
+        Button log10 = (Button)findViewById(R.id.log10);
+        Button rand = (Button)findViewById(R.id.rand);
+
 //        TextView jieguo = (TextView) findViewById(R.id.jieguo);
 
 
 
 
 
-//        Button sin = (Button)findViewById(R.id.sin);
-//        Button cos = (Button)findViewById(R.id.cos);
-//        Button tan = (Button)findViewById(R.id.tan);
+
 
 
 
@@ -128,9 +144,35 @@ public class MainActivity extends AppCompatActivity {
         //}
     }
 
+
+    protected void onRestar(){
+        super.onRestart();
+    }
+
+    protected void onStart(){
+        super.onStart();
+    }
+
+    protected void onResume(){
+        super.onResume();
+    }
+
+    protected void onPause(){
+        super.onPause();
+    }
+
+    protected void onStop(){
+        super.onStop();
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+    }
     public void onClick(View view){
 
        switch (view.getId()){
+//           Configuration mConfiguration = this.getResources().getConfiguration(); //获取设置的配置信息
+//           int ori = mConfiguration.orientation; //获取屏幕方向
            case R.id.Button0:
            case R.id.Button1:
            case R.id.Button2:
@@ -227,6 +269,151 @@ public class MainActivity extends AppCompatActivity {
            }
 
 
+            case R.id.sin:{
+                    input = (TextView)findViewById(R.id.jieguo);
+                    String nowSin = input.getText().toString();
+                    String newContentSin;
+
+                    if(isInteger(nowSin)){
+                        newContentSin = Math.sin((Double.parseDouble(nowSin)/180*Math.PI)) + "";
+                    }
+                    else{
+                        newContentSin = "Error!";
+                    }
+
+                    input.setText(newContentSin);
+                    break;
+
+                }
+
+           case R.id.cos:{
+               input = (TextView)findViewById(R.id.jieguo);
+               String nowCos = input.getText().toString();
+               String newContentCos;
+
+               if(isInteger(nowCos)){
+                   newContentCos = Math.cos((Double.parseDouble(nowCos)/180*Math.PI)) + "";
+               }
+               else{
+                   newContentCos = "Error!";
+               }
+
+               input.setText(newContentCos);
+               break;
+
+           }
+           case R.id.tan:{
+               input = (TextView)findViewById(R.id.jieguo);
+               String nowTan = input.getText().toString();
+               String newContentTan;
+
+               if(isInteger(nowTan)){
+                   newContentTan = Math.tan((Double.parseDouble(nowTan)/180*Math.PI)) + "";
+               }
+               else{
+                   newContentTan = "Error!";
+               }
+
+               input.setText(newContentTan);
+               break;
+
+           }
+
+           case R.id.PI:{
+               input = (TextView)findViewById(R.id.jieguo);
+               input.setText(Math.PI + "");
+               break;
+           }
+
+           case R.id.e:{
+               input = (TextView)findViewById(R.id.jieguo);
+               input.setText(Math.E + "");
+               break;
+           }
+
+           case R.id.pingfang:{
+               input = (TextView)findViewById(R.id.jieguo);
+               try {
+                   input.setText(Math.pow(Double.parseDouble(input.getText().toString()),2) + "");
+               }catch (NumberFormatException e){
+                   throw new NumberFormatException("For input string: " + input.getText().toString());
+               }
+//               finally {
+//                   input.setText("Error!");
+//               }
+               break;
+           }
+
+           case R.id.lifang:{
+               input = (TextView)findViewById(R.id.jieguo);
+               try {
+                   input.setText(Math.pow(Double.parseDouble(input.getText().toString()),3) + "");
+               }catch (NumberFormatException e){
+                   throw new NumberFormatException("For input string: " + input.getText().toString());
+               }
+//               finally {
+//                   input.setText("Error!");
+//               }
+               break;
+           }
+
+           case R.id.genhao:{
+               input = (TextView)findViewById(R.id.jieguo);
+               try {
+                   input.setText(Math.pow(Double.parseDouble(input.getText().toString()),0.5) + "");
+               }catch (NumberFormatException e){
+                   throw new NumberFormatException("For input string: " + input.getText().toString());
+               }
+//               finally {
+//                   input.setText("Error!");
+//               }
+               break;
+           }
+
+           case R.id.rand:{
+               input = (TextView)findViewById(R.id.jieguo);
+               input.setText(Math.random() + "");
+               break;
+           }
+
+           case R.id.jiecheng:{
+               input = (TextView)findViewById(R.id.jieguo);
+               String nowJie = input.getText().toString();
+               String newContentJie;
+               int ans = 1;
+
+               if(isInteger(nowJie)&&Integer.parseInt(nowJie)>0){
+                   for(int i = 0;i<Integer.parseInt(nowJie);i++){
+                       ans = ans*(Integer.parseInt(nowJie)-i);
+                   }
+
+                   newContentJie = ans + "";
+               }
+               else{
+                   newContentJie = "Error!";
+               }
+
+               input.setText(newContentJie);
+               break;
+           }
+
+           case R.id.log10:{
+               input = (TextView)findViewById(R.id.jieguo);
+               String nowLog = input.getText().toString();
+               String newContentLog;
+
+               if(Double.parseDouble(nowLog)>0){
+                   newContentLog = Math.log10(Double.parseDouble(nowLog)) + "";
+               }
+               else{
+                   newContentLog = "Error!";
+               }
+
+               input.setText(newContentLog);
+               break;
+           }
+
+
 //           case R.id.dengyu:
 //           {
 //               input = (TextView)findViewById(R.id.jieguo);
@@ -236,9 +423,36 @@ public class MainActivity extends AppCompatActivity {
 //
 //               }
 //           }
+           default:
+               throw new IllegalStateException("Unexpected value: " + view.getId());
        }
+//        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+//            switch (view.getId()){
+//                case R.id.sin:{
+//                    input = (TextView)findViewById(R.id.jieguo);
+//                    String nowSin = input.getText().toString();
+//                    String newContentSin;
+//
+//                    if(isInteger(nowSin)){
+//                        newContentSin = Math.sin(Double.parseDouble(nowSin)) + "";
+//                    }
+//                    else{
+//                        newContentSin = "Error!";
+//                    }
+//
+//                    input.setText(newContentSin);
+//                    break;
+//
+//                }
+//
+//            }
+//        }
+
     }
 
 
-
+    public static boolean isInteger(String str) {
+        Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
+        return pattern.matcher(str).matches();
+    }
 }
