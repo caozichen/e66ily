@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <GridLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="700dp"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="24dp"-->
+<!--        tools:layout_editor_absoluteY="14dp"-->
+<!--&gt;</GridLayout>-->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:text="拍照"
+        android:textSize="50dp"
+        tools:ignore="HardcodedText,MissingConstraints,MissingPrefix"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="416dp" />
+
+    <
+
+
+
+    ></androidx.constraintlayout.widget.ConstraintLayout>
+
+
