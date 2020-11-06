@@ -29,13 +29,13 @@ public class MainActivity extends Activity {
     ActionBar actionBar;
 
     ContentResolver contentResolver;
-    ImageButton insert=null;
-    ImageButton search=null;
+    Button insert=null;
+    Button search=null;
     Button delete=null;
 
-    ImageButton clear1;
-    ImageButton clear2;
-    ImageButton clear3;
+//    ImageButton clear1;
+//    ImageButton clear2;
+//    ImageButton clear3;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -43,13 +43,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        actionBar=getActionBar();
-        actionBar.setDisplayShowHomeEnabled(false);
-        actionBar.hide();
-
-        contentResolver=getContentResolver();
-        insert=(ImageButton)findViewById(R.id.insert);
-        search=(ImageButton)findViewById(R.id.search);
+//        actionBar=getActionBar();
+//        actionBar.setDisplayShowHomeEnabled(false);
+//        actionBar.hide();
+//
+//        contentResolver=getContentResolver();
+        insert=(Button)findViewById(R.id.insert);
+        search=(Button)findViewById(R.id.search);
         delete=(Button)findViewById(R.id.delete);
 
         delete.setText("清空单词本");
@@ -127,34 +127,35 @@ public class MainActivity extends Activity {
             }
         });
 
-        clear1=(ImageButton)findViewById(R.id.clear1);
-        clear2=(ImageButton)findViewById(R.id.clear2);
-        clear3=(ImageButton)findViewById(R.id.clear3);
-
-        clear1.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                ((EditText)findViewById(R.id.word)).setText("");
-            }
-        });
-        clear2.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                ((EditText)findViewById(R.id.detail)).setText("");
-            }
-        });
-        clear3.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                ((EditText)findViewById(R.id.search_edittext)).setText("");
-            }
-        });
+//        clear1=(ImageButton)findViewById(R.id.clear1);
+//        clear2=(ImageButton)findViewById(R.id.clear2);
+//        clear3=(ImageButton)findViewById(R.id.clear3);
+//
+//        clear1.setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View arg0) {
+//                // TODO Auto-generated method stub
+//                ((EditText)findViewById(R.id.word)).setText("");
+//            }
+//        });
+//        clear2.setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                ((EditText)findViewById(R.id.detail)).setText("");
+//            }
+//        });
+//        clear3.setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                ((EditText)findViewById(R.id.search_edittext)).setText("");
+//            }
+//        });
+//        });
 
     }
 

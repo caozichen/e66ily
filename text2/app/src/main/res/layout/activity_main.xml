@@ -24,21 +24,24 @@
             android:id="@+id/insert"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape" />
+            android:background="@drawable/shape"
+            android:text="插入"/>
         <Button
             style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/search"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/shape" />
+            android:background="@drawable/shape"
+            android:text="搜索"/>
         <Button
             style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/delete"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/shape" />
+            android:background="@drawable/shape"
+            android:text="删除"/>
 
     </LinearLayout>
 
@@ -56,15 +59,15 @@
             android:inputType="textUri"
             android:hint="@string/word" />
 
-        <ImageButton
-            android:id="@+id/clear1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/clear"
-            android:src="@drawable/clear"
-            android:visibility="visible" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/clear1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:contentDescription="@string/clear"-->
+<!--            android:src="@drawable/clear"-->
+<!--            android:visibility="visible" />-->
 
     </RelativeLayout>
     <RelativeLayout
@@ -81,15 +84,15 @@
             android:padding="3dp"
             android:hint="@string/detail"
             android:textColorHint="#AAAAAA" />
-        <ImageButton
-            android:id="@+id/clear2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/clear"
-            android:src="@drawable/clear"
-            android:visibility="visible" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/clear2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:contentDescription="@string/clear"-->
+<!--            android:src="@drawable/clear"-->
+<!--            android:visibility="visible" />-->
 
     </RelativeLayout>
     <RelativeLayout
@@ -106,14 +109,14 @@
             android:padding="3dp"
             android:hint="@string/search" />
 
-        <ImageButton
-            android:id="@+id/clear3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/clear"
-            android:src="@drawable/clear"
-            android:visibility="visible" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/clear3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:contentDescription="@string/clear"-->
+<!--            android:src="@drawable/clear"-->
+<!--            android:visibility="visible" />-->
     </RelativeLayout>
 </RelativeLayout>
