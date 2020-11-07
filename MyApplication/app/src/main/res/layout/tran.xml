@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".zhuanshi"
+    tools:ignore="ExtraText">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="700dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="14dp">
+
+
+    <Button
+        android:id="@+id/buttontwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="er"
+        android:text="转换 "
+        android:layout_column="1"
+        android:layout_row="0"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/two"
+        android:layout_width="295dp"
+        android:layout_height="68dp"
+        android:hint="二进制转十进制"
+        android:layout_column="0"
+        android:layout_row="0" />
+
+        <Button
+            android:id="@+id/buttoneig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="ba"
+            android:text="转换 "
+            />
+
+        <EditText
+            android:id="@+id/eig"
+            android:layout_width="298dp"
+            android:layout_height="59dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:hint="八进制转十进制"
+ />
+
+        <EditText
+            android:id="@+id/tsix"
+            android:layout_width="298dp"
+            android:layout_height="59dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:hint="十六进制转十进制"
+ />
+
+
+        <Button
+            android:id="@+id/buttontsix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="shiliui"
+            android:text="转换 "
+ />
+
+        <EditText
+        android:id="@+id/kg"
+        android:layout_width="298dp"
+        android:layout_height="59dp"
+        android:hint="kg->g"
+            android:layout_row="3"
+            android:layout_column="0"
+ />
+
+
+        <Button
+            android:id="@+id/buttonten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:onClick="kg"
+            android:text="转换 "
+ />
+
+        <EditText
+            android:id="@+id/ms"
+            android:layout_width="298dp"
+            android:layout_height="59dp"
+            android:hint="m/s->km/h"
+            android:layout_row="4"
+            android:layout_column="0"
+            />
+
+
+        <Button
+            android:id="@+id/buttonms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:onClick="ms"
+            android:text="转换 "
+            />
+
+        <EditText
+            android:id="@+id/lifang"
+            android:layout_width="298dp"
+            android:layout_height="59dp"
+            android:hint="m³->cm³"
+            android:layout_row="5"
+            android:layout_column="0"
+            />
+
+
+        <Button
+            android:id="@+id/buttonlifang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:onClick="lifang"
+            android:text="转换 "
+            />
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
