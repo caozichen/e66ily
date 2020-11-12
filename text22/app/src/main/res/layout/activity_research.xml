@@ -32,7 +32,7 @@
         android:singleLine="true"
         android:textSize="20sp"
         android:textColor="#000"
-        android:hint="请在此输入解释"
+        android:hint="请在此输入例句或其它"
         android:id="@+id/EditTextREAuthor"/>
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
@@ -57,7 +57,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="单词编辑："
+            android:text="单词解释："
             android:textColor="#000"
             android:textSize="20sp"
             android:layout_margin="10dp"
@@ -69,7 +69,7 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:gravity="start"
-            android:hint="请在此输入例句或其它"
+            android:hint="请在此输入解释"
             android:textSize="20sp" />
 
         <LinearLayout

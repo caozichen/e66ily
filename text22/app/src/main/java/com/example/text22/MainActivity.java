@@ -107,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
         ButtonSeek = findViewById(R.id.ButtonSeek);
         EditTextSeek = findViewById(R.id.EditTextSeek);
+
+        final MyDataBaseHelper dbHelper = new MyDataBaseHelper(this,"Note.db",null,1);
         ButtonSeek.setOnClickListener(new View.OnClickListener(){       //点击跳转查询界面
             @Override
             public void onClick(View v){
@@ -118,10 +120,29 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                     Toast.makeText(MainActivity.this,"查询值不能为空",Toast.LENGTH_LONG).show();
                 }
                 else{           //否则通过intent给查询界面传入查询的title
-                    Intent intent = new Intent(MainActivity.this, com.example.text22.Research.class);
-                    //intent.putExtra("tranTitle",EditTextSeekString);
-                    intent.putExtra("tranTitletoRE",EditTextSeekString);
-                    startActivity(intent);
+//                    Intent intent = new Intent(MainActivity.this, com.example.text22.Research.class);
+//                    //intent.putExtra("tranTitle",EditTextSeekString);
+//                    intent.putExtra("tranTitletoRE",EditTextSeekString);
+//                    startActivity(intent);
+                    int size = TADList.size();
+                    //if(size>0){
+                    TADList.removeAll(TADList);
+                    IDList.removeAll(IDList);
+                    simpleAdapter.notifyDataSetChanged();       //清空两个list中的值
+                    //}
+
+                    SQLiteDatabase db = dbHelper.getWritableDatabase();         //实例化SQLitedatabase
+                    String sql = "select * from Note where title like ?";
+                    Cursor cursor  = db.rawQuery(sql,new String[]{EditTextSeekString + "%"});
+                    while(cursor.moveToNext()){         //对两个list重新赋予值
+                        int id=cursor.getInt(cursor.getColumnIndex("id"));
+
+                        String title = cursor.getString(cursor.getColumnIndex("title"));
+                        String date = cursor.getString(cursor.getColumnIndex("date"));
+                        String content = cursor.getString(cursor.getColumnIndex("content"));
+                        IDList.add(id);
+                        TADList.add("单词：" + title+ "\n" + "解释：" + content);
+                    }
 
                 }
             }

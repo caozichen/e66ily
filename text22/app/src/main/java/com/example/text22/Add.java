@@ -71,7 +71,7 @@ public class Add extends AppCompatActivity implements OnClickListener{
                 Content = String.valueOf(EditTextAddContent.getText());
                 Log.d("Title",Title);
                 if(Title.length()==0){               //标题为空给出提示
-                    Toast.makeText(this, "请输入一个标题", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "请输入一个单词", Toast.LENGTH_LONG).show();
                 }else {
                     values.put("title", Title);
                     values.put("content", Content);

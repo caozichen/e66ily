@@ -21,7 +21,7 @@
         android:singleLine="true"
         android:textSize="20sp"
         android:textColor="#000"
-        android:hint="请在此输入解释"
+        android:hint="请在此输入例句或其它"
         android:id="@+id/EditTextAddAuthor"/>
 
 <!--    <LinearLayout-->
@@ -47,7 +47,7 @@
             android:id="@+id/EditTextAddContent"
             android:layout_width="fill_parent"
             android:layout_height="320dp"
-            android:hint="请在此输入例句或其它"
+            android:hint="请在此输入解释"
             android:gravity="start"/>
         <LinearLayout
             android:layout_width="match_parent"

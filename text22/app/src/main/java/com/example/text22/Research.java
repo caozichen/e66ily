@@ -41,7 +41,7 @@ public class Research extends AppCompatActivity implements OnClickListener{
     private void InitNote() {
         MyDataBaseHelper dbHelper = new MyDataBaseHelper(this,"Note.db",null,1);
         SQLiteDatabase db = dbHelper.getWritableDatabase();     //同上，获得可写文件
-        Cursor cursor  = db.query("Note",new String[]{"id","title","content"},"title=?",new String[]{tranTitle+""},null,null,null);
+        Cursor cursor  = db.query("Note",new String[]{"id","title","content"},"title LIKE ? ",new String[]{"%" + tranTitle+ "%"},null,null,null);
 
         if(cursor.moveToNext()) {       //逐行查找，得到匹配信息
             do {
